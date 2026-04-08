@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <link href="AdminPage.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/c1beb2c326.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="sidebar">
+    <a href="#" class="sidebar-icon1">
+      <span class="sidebar-title">Home</span>
+      <i class="fa-solid fa-house-chimney "></i>
+    </a>
+    <a href="#" class="sidebar-icon2">
+      <span class="sidebar-title">Services</span>
+      <i class="fa-solid fa-headphones"></i>
+    </a>
+    <a href="#" class="sidebar-icon3">
+      <span class="sidebar-title">Alerts</span>
+      <i class="fa-solid fa-flag"></i>
+    </a>
+    <a href="#" class="sidebar-icon4">
+      <span class="sidebar-title">Stats</span>
+      <i class="fa-solid fa-chart-pie"></i>
+    </a>
+  </div>
+
+  <nav class="nav-container">
+    <form action="">
+      <div class="nav-search">
+        <input type="text" placeholder="Search" class="nav-search_box">
+        <button type="submit" class="nav-search-btn">
+          <div class="nav-search-btn_div">
+            <img src="../Other/Image/magnifying-glass-solid-full.svg" alt="NOOO" class="nav-search-icon">
+          </div>
+        </button>
+      </div>
+    </form>
+
+    <div class="nav-right-container">
+      <div style="width: 30px; height: 25px;">
+        <button class="nav-notification-btn">
+        <i class="fa-solid fa-bell fa-xl" style="color: #808080; width: 100%; height: 100%;"></i>
+      </button>
+      </div>
+
+      <div style="width: 30px; height: 25px;" class="nav-icon-mail">
+        <button class="nav-notification-btn">
+        <i class="fa-solid fa-envelope fa-xl" style="color: #808080; width: 100%; height: 100%;"></i>
+      </button>
+      </div>
+
+      <button id="nav-name-btn"  onclick="document.getElementById('nav-name-div').style.display= 'flex';">
+        <span>Jaden Yoo</span>
+      </button>
+
+      <div id="nav-name-div" class="nav-name-div">
+        <div class="nav-name-click-container">
+          <span class="nav-name-click-name">Welcome, Jaden Yoo!</span>
+            <button class="nav-name-click-btn" onclick="document.getElementById('nav-name-div').style.display= 'none';">
+             <i class="fa-solid fa-xmark"></i>
+            </button>
+          <a href="#" id="nav-name-click-account"> Account Settings</a>
+          <a href="#" id="nav-name-click-environment"> Environment Settings</a>
+          <a href="#" id="nav-name-click-logout"> Logout</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="main">
+    <h2 class="main-title">Dashboard</h2>
+    <div class="main-dashboard-container">
+      <div class="main-dashboard-card-container card1">
+        <h6>Earning (Monthly)</h6>
+        <span>$40,0000</span>
+        <i class="fa-solid fa-calendar" style="color: #808080;"></i>
+      </div>
+
+      <div class="main-dashboard-card-container card2">
+        <h6>Earning (Annual)</h6>
+        <span>$800,0000</span>
+        <i class="fa-solid fa-dollar-sign" style="color: #808080;"></i>
+      </div>
+
+      <div class="main-dashboard-card-container card3">
+        <h6>Task</h6>
+        <span>12</span>
+        <i class="fa-solid fa-list-check" style="color: #808080;"></i>
+      </div>
+
+      <div class="main-dashboard-card-container card4">
+        <h6>Requests</h6>
+        <span>26</span>
+        <i class="fa-solid fa-comments" style="color: #808080;"></i>
+      </div>
+    </div>
+
+    <div class="earningTask">
+      <div class="earningTask-overview">
+        <div class="earningTask-overview-header">
+          <h4>Earning Overview</h4>
+        </div>
+
+        <canvas id="myChart"></canvas>
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['2023', '2024', '2025', 'January', 'February', 'March', 'April'],
+        datasets: [{
+          label: 'Earnings',
+          data: [24300, 21600, 31100, 37800, 37000, 36500, 38000],
+          backgroundColor: 'rgba(255, 99, 132, 0.2)',
+          borderColor: 'rgba(255, 99, 132, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+      </div>
+
+      <div class="earningTask-tasks-container">
+        <div class="earningTask-overview-header">
+          <h4>Tasks</h4>
+        </div>
+
+        <ul class="earningTask-tasks-list">
+          <li class="earningTask-tasks-item">Complete project proposal <span class="task-status">In Progress</span></li>
+          <li class="earningTask-tasks-item">Review team feedback <span class="task-status">Pending</span></li>
+          <li class="earningTask-tasks-item">Prepare presentation slides <span class="task-status">Completed</span></li>
+          <li class="earningTask-tasks-item">Schedule client meeting <span class="task-status">In Progress</span></li>
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
