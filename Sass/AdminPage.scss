@@ -1,0 +1,406 @@
+@use 'template.scss';
+
+.sidebar {
+  width: 64px;
+  height: 100%;
+  position: fixed;
+  background: #494cb4;
+  color: white;
+  font-size: 28px;
+  flex-direction: column;
+  display: flex;
+  z-index: 10;
+}
+
+.sidebar:hover {
+  transition: 0.3s;
+  width: 200px;
+}
+
+a {
+  // width: 100%;
+  position: relative;
+  // left: 12px;
+  color: white;
+  display: inline;
+}
+
+a:hover {
+  // color: black;
+  cursor: pointer;
+}
+
+@mixin sidebar-i($top) {
+  width: 35px;
+  position: relative;
+  left: 12px;
+  top: $top;
+  // margin-top: 72px;
+  // margin-left: 12px;
+  color: white;
+}
+
+.sidebar-icon1 {
+  @include sidebar-i(24px);
+  // margin-top: 48px
+}
+
+.sidebar-icon2 {
+  @include sidebar-i(72px);
+}
+
+.sidebar-icon3 {
+  @include sidebar-i(120px);
+}
+
+.sidebar-icon4 {
+  @include sidebar-i(168px);
+}
+
+.sidebar-title {
+  font-size: 24px;
+  position: absolute;
+  display: inline;
+  left: -100px;
+  // visibility: hidden;
+  // top: 8px;
+  // opacity: 0;
+  // display: none
+}
+
+.sidebar:hover .sidebar-title {
+  transform: translateX(160px);
+  transition: all 0.4s;
+  // opacity: 1;
+}
+
+
+.nav-container {
+  width: 100%;
+  height: 70px;
+  background: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-shadow: #aaa 0px 1px 3px;
+}
+
+.nav-search {
+  width: 550px;
+  height: 50px;
+  position: relative;
+  // top: 10px;
+  left: 90px;
+  display: flex;
+}
+
+.nav-search_box {
+  width: 200px;
+  height: 50px;
+  // height: 40px;
+  padding: 12px 10px;
+  border: lightgrey solid 1px;
+  border-right: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-sizing: border-box;
+}
+
+.nav-search_box:focus {
+  width: 400px;
+  animation: search 0.3s;
+}
+
+@keyframes search {
+  0% {
+    width: 200px;
+  }
+  100% {
+    width: 400px;
+  }
+}
+
+.nav-search-btn_div {
+  width: 50px;
+  height: 50px;
+  background: #000;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-search-icon {
+  width: 24px;
+  height: 24px;
+  // padding: 15px;
+  // background: black;
+}
+
+.nav-search-btn {
+  border: none;
+  background: none;
+  padding: 0px;
+}
+
+.nav-right-container {
+  width: 320px;
+  height: 50px;
+  // margin-left: auto;
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-right-container button {
+  // width: 21px;
+  // height: 24px;
+  // border: none;
+  // background: none;
+}
+
+.nav-notification-btn {
+  height: 100%;
+  width: 100%;
+  background: none;
+  width: 21px;
+  height: 24px;
+  border: none;
+  background: none;
+}
+
+.nav-icon-mail {
+  position: relative;
+  left: 64px;
+}
+
+#nav-name-btn {
+  width: auto;
+  height: 24px;
+  position: relative;
+  left: 110px;
+  display: block;
+  background: none;
+  border: none;
+}
+
+#nav-name-btn span {
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  font-size: 18px;
+}
+
+.main {
+  width: calc(100% - 64px);
+  height: 100vh;
+  background: #fafafa;
+  margin-left: auto;
+}
+
+.main-title {
+  position: relative;
+  left: 96px;
+  top: 32px;
+  // font-family: fontB;
+}
+
+.main-dashboard-container {
+  width: 92%;
+  height: 150px;
+  // border: 1px solid #aaa;
+  margin: auto;
+  display: flex;
+  position: relative;
+  top: 64px;
+}
+
+.main-dashboard-card-container {
+  width: 25%;
+  height: 100%;
+  // border: 1px solid black;
+  // border-left: 7px solid lightgreen;
+  background: white;
+  border-radius: 10px;
+  margin: 0px 16px;
+  box-shadow: 2px 2px 3px #aaa;
+}
+
+@mixin card-border-color($color) {
+  border-left: 7px solid $color;
+
+    * {
+    position: relative;
+    left: 32px;
+    display: flex;
+  }
+
+  h6 {
+    top: 18px;
+    font-size: 24px;
+    font-weight: normal;
+  }
+
+  span {
+    top: 34px;
+    font-size: 28px;
+    font-weight: 500;
+  }
+
+  i {
+    font-size: 72px !important;
+    top: -32px;
+    left: 260px;
+  }
+}
+
+.card1 {
+  @include card-border-color(skyblue);
+}
+.card1 {
+  @include card-border-color(skyblue);
+}
+
+.card2 {
+  @include card-border-color(lightgreen);
+}
+
+.card3 {
+  @include card-border-color(darkblue);
+}
+
+.card4 {
+  @include card-border-color(orange);
+}
+
+.earningTask {
+  width: 90%;
+  height: 600px;
+  // background: #000;
+  // border: #000 solid 1px;
+  margin: auto;
+  position: relative;
+  top: 96px;
+  display: flex;
+}
+
+.earningTask-overview {
+  width: 60%;
+  height: 550px;
+  padding-bottom: 50px;
+  background: #f9f9f9;
+  box-shadow: 0 0 2px 2px #ddd;
+  // border: #000 solid 1px;
+  border-radius: 10px;
+}
+
+.earningTask h4 {
+  font-size: 24px;
+  // font-weight: bold;
+  position: relative;
+  left: 16px;
+  top: 12px;
+  // padding-bottom: 16px;
+  margin: auto;
+}
+
+.earningTask-overview-header {
+  width: 100%;
+  height: 50px;
+  background: #f1f1f1;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.earningTask-tasks-container {
+  width: 30%;
+  height: 550px;
+  background: white;
+  margin-left: auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 1px 2px #bbb;
+}
+
+.earningTask-tasks-item {
+  margin: 24px 0px;
+  font-size: 18px;
+}
+
+.nav-name-div {
+  width: 300px;
+  height: 200px;
+  background: #f1f1f1;
+  border-radius: 10px;
+  position: absolute;
+  top: 72px;
+  right: 96px;
+  z-index: 10;
+}
+
+.nav-name-click-btn {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  /* min-width: 100px; */
+  height: auto;
+  position: absolute;
+  /* left: 110px; */
+}
+
+.nav-name-click-name {
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  left: 24px;
+  top: 12px;
+  
+}
+.nav-name-click-btn i {
+  font-size: 24px;
+  position: absolute;
+  left: 255px;
+  top: 12px;
+}/*# sourceMappingURL=AdminPage.css.map */
+
+
+@mixin nav-name-click-name($top) {
+  font-size: 16px;
+  // font-weight: bold;
+  position: absolute;
+  left: 24px;
+  top: $top;
+  color: black;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+#nav-name-click-account {
+  @include nav-name-click-name(64px);
+}
+
+#nav-name-click-environment {
+  @include nav-name-click-name(96px);
+}
+
+#nav-name-click-logout {
+  @include nav-name-click-name(160px);
+  color: red;
+  // text-decoration: none;
+  margin-left: 210px;
+}
+
+
+
+
+// a {
+// font-size: 16px;
+// /* text-decoration: none; */
+// color: black;
+// position: absolute;
+// left: 24px;
+// top: 48px;
+// }
