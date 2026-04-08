@@ -1,0 +1,98 @@
+.container {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  /* height: 5px;
+  background-color: rgb(0, 255, 115); */
+}
+
+.left {
+ width: 70%;
+ /* height: 350px;
+ background-color: #eee; */
+ float: left;
+}
+
+.right {
+ width: 30%;
+ /* height: 350px;
+ background-color: #ccc; */
+  float: left;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  /* background-color: #aaa; */
+  float: left;
+  }
+
+.image {
+  width: 30%;
+  height: 300px;
+  /* background-color: blue; */
+  float: left;
+}
+
+.content {
+  /* width: 100%; */
+  height: 220px;
+  /* background-color: #eee; */
+  clear: both;
+}
+
+.Profile {
+  width: 60px;
+  height: 60px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  float: left;
+}
+
+.HeaderTitle {
+  font-size: 18px;
+  font-family: arial;
+  margin-top: 12px;
+  margin-bottom: 10px;
+}
+
+.HeaderContent {
+  font-size: 14px;
+  font-family: arial;
+  margin: none;
+}
+
+.BlogImage {
+  width: 100%;
+}
+
+.ContentTitle {
+  font-size: 24px;
+  font-family: arial;
+  margin-left: 10px;
+  margin-bottom: 5px
+}
+
+.ContentContent{
+  font-size: 18px;
+  font-family: arial;
+  margin-left: 10px;
+}
+
+.navbar li {
+  display: inline-block;
+  width: 60px;
+  background-color: #eee;
+  padding: 15px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;;
+}
+
+.navbar a {
+  width: 9px;
+  font: 16px arial;
+  text-decoration: none;
+}

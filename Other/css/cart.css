@@ -1,0 +1,162 @@
+h1, h2, h3, h4, h5, h6, p, span, a{
+  font-family: arial;
+  margin: 0px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  width: 850px;
+  height: 500px;
+  background-color: #b2ccd6;
+  margin: auto;
+  position: relative;
+  margin-top: 50px;
+}
+
+.cart {
+  font-size: 24px ;
+  color: #133761;
+  position: relative;
+  top: -25px;
+}
+
+.content {
+  width: 80%;
+  height: 80%;
+  /* background-color: red; */
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: auto;  /* 내용에 따라 칸 크기 자동 조정 */
+}
+
+th {
+  border-bottom: 2px solid black;
+  padding-left: 0px;
+  padding-right: 0px;
+  color: #aaa;
+  font-family: cascadia code;
+  /* width: 100%; */
+  padding-left: 0px;
+  padding-right: 0px
+}
+
+div.table {
+  width: 100%;
+  /* height: 100%; */
+  background-color: white;
+  border-radius: 5px;  /* 모서리를 둥글게 */
+}
+
+.Image {
+  width: 100px;
+  float: left;
+  margin-left: 30px;
+  margin-right: 20px;
+  /* position: relative;
+  left: -15px; */
+}
+
+.Sony {
+  /* float: left; */
+  text-align: left;;
+  color: black;
+  padding-left: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.Model {
+  /* float: left; */
+  text-align: left;
+  padding-left: 20px;
+}
+
+.Item {
+  /* 테이블 행 전체에 여백을 주려면 margin 대신 padding을 사용하세요. */
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.FirstTh {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.Amount {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.Total {
+  color: #133761;
+  text-align: right;
+  padding-right: 15px;
+}
+
+.EditCart {
+  color: #133761;
+  position: relative;
+  top: 35px;
+}
+
+button.Payment {
+  width: 230px;
+  height: 60px;
+  background-color: #133761;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  float: right;
+  margin-top: 15px;
+  color: white;
+  font-family: cascadia code;
+  border: none;
+  cursor: pointer;
+  /* padding: 15px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: coral;
+  color: white; */
+}
+
+/* p.Payment {
+  color: white;
+margin: 0;
+} */
+
+.table table th:nth-child(1){
+  max-width: 400px;
+}
+
+.FPrice {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+button.Payment:hover {
+  background-color: darkblue;
+}
+
+button.Payment:focus {
+  background-color: red;
+}
+
+button.Payment:active {
+  background-color: black;
+  
+}
+

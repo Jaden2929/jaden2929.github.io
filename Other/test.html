@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+      <button id="nav-name-btn"  onclick="document.getElementById('nav-name-div').style.display= 'flex';">
+        <span>Jaden Yoo</span>
+      </button>
+
+      <div id="nav-name-div" class="nav-name-div">
+        <div>
+         <p>Welcome, Jaden Yoo!</p>
+         <a class="nav-name-click-btn" onclick="document.getElementById('nav-name-div').style.display= 'none';">
+           <span>X</span>
+         </a>
+        </div>
+      </div>
+</body>
+</html>
+
+<style>
+.nav-name-div {
+  width: 300px;
+  height: 200px;
+  background: #f1f1f1;
+  border-radius: 10px;
+  position: absolute;
+  top: 72px;
+  right: 96px;
+  z-index: 10;
+}
+
+.nav-name-click-btn {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  /* min-width: 100px; */
+  height: auto
+}
+
+.nav-name-click-btn span {
+  font-size: 18px;
+}/*# sourceMappingURL=AdminPage.css.map */
+</style>

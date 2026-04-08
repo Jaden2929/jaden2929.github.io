@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  // font-family: fontR;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, span {
+  margin: 0;
+}
+
+@font-face {
+  font-family: fontR;
+  src: url(../Other/font/NanumSquareR.woff);
+}
+
+@font-face {
+  font-family: fontB;
+  src: url(../Other/font/NanumSquareB.ttf);
+}
+
