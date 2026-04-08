@@ -402,6 +402,7 @@ a:hover {
   top: 72px;
   right: 96px;
   z-index: 10;
+  display: none;
 }
 
 .nav-name-click-btn {
